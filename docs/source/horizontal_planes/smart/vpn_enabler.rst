@@ -11,7 +11,7 @@ VPN enabler
 ***************
 Introduction
 ***************
-This enabler will facilitate the access to a node or device from a different network to the site's private network using a public network (e.g., the Internet) or a non-trusted private network.
+This enabler facilitates the access to a node or device from a different network to the site's private network using a public network (e.g., the Internet) or a non-trusted private network.
 
 ***************
 Features
@@ -129,7 +129,7 @@ Response example:
       "serverIP": "192.168.1.67",
       "serverPort": "51820",
       "clientIP": "192.168.2.56/32",
-      "allowedIPs": "0.0.0.0/0,::/0",
+      "allowedIPs": "0.0.0.0/0",
       "message": "Peer added successfully"
     }
 
@@ -145,13 +145,13 @@ Response example:
     [Peer]
     PublicKey = iJT+CW4QoWNDIDo763CPx1TZ3x9bSNTN5t0uQbzo5jo=
     PresharedKey = FIOSD2ErZISlHwFsBRK5RVyd7ENhvJ4x3W101BoewqQ=
-    AllowedIPs = 0.0.0.0/0,::/0
+    AllowedIPs = 0.0.0.0/0
     Endpoint = 192.168.1.67:51820
     PersistentKeepalive = 25
 
 
 .. note:: 
-  The *AllowedIPs* field must be filled by the user depending on the behaviour that expects from the VPN. A value of *0.0.0.0/0,::/0* will redirect all the traffic (including the internet) through the VPN, 
+  The *AllowedIPs* field must be filled by the user depending on the behaviour that expects from the VPN. A value of *0.0.0.0/0* will redirect all the traffic (including the internet) through the VPN, 
   . Specifying a subnetwork (e.g. 10.1.243.0/24), only the traffic with a destination inside this subnetwork will be sent via the VPN.
 
 4. Connect to the VPN using a WireGuard client program. The instructions are provided in the *Connect to the VPN* subsection.
@@ -228,7 +228,7 @@ The enabler can be configured using the following environment variables:
 - **SERVER_IP**: public IP or DNS name of the machine where runs the VPN enabler.
 - **WG_SUBNET**: internal subnet of the WireGuard interface. The value must be the first IP of the subnet in CIDR format (<subnet_first_ip>/<subnet_mask_bits>, e.g., for the subnet 192.168.2.0/24, the value must be 192.168.2.1/24). This parameter is important because determines the maximum number of clients of the VPN. For the example subnet, the maximum number of clients will be 253.
 - **WG_PORT**: UDP port where it is exposed the WireGuard network interface.
-- **PEER_ALLOWED_IPS**: allowed subnets for the clients. A value of *0.0.0.0/0,::/0* will allow the clients to connect to every network via the VPN, including to the internet. Specifying a subnetwork (e.g. 10.1.243.0/24) the client will only be able to reach this subnetwork.
+- **PEER_ALLOWED_IPS**: allowed subnets for the clients. A value of *0.0.0.0/0* will allow the clients to connect to every network via the VPN, including to the internet. Specifying a subnetwork (e.g. 10.1.243.0/24) the client will only be able to reach this subnetwork.
 - **MONGODB_HOST**: host of the MongoDB database.
 - **MONGODB_PORT**: port number of the MongoDB database.
 - **MONGODB_USER**: user of the MongoDB database.
@@ -250,7 +250,7 @@ Local code development
 
   .. code-block:: javascript
 
-    utils/index.js, line 34:    await exec(`wg ...   -->   await exec(`sudo wg ... )
+    utils/index.js, line 35:    await exec(`wg ...   -->   await exec(`sudo wg ... )
 
 4. Install the dependencies. Execute: 
 
@@ -298,8 +298,8 @@ Example: allow the client to redirect all the traffic through the VPN
   PrivateKey = qAuVUEbmcI3ofLsjJmQ6+RtEejoNX+WHs7QOsIccn0Y=
 
 
-Example: allow the client to only redirect the traffic to the configured local network (e.g. 10.0.0.0/24)
-----------------------------------------------------------------------------------------------------------
+Example: allow the client to only redirect the traffic to the configured local network (e.g. 10.0.0.0/24) - Basic
+------------------------------------------------------------------------------------------------------------------
 
 ::
 
@@ -307,6 +307,25 @@ Example: allow the client to only redirect the traffic to the configured local n
   Address = 192.168.2.1/24
   PostUp = iptables -I FORWARD -i wg0 -j DROP; iptables -I FORWARD -i wg0 -d 10.0.0.0/24 -j ACCEPT
   PostDown = iptables -D FORWARD -i wg0 -j DROP; iptables -D FORWARD -i wg0 -d 10.0.0.0/24 -j ACCEPT
+  ListenPort = 51820
+  PrivateKey = qAuVUEbmcI3ofLsjJmQ6+RtEejoNX+WHs7QOsIccn0Y=
+
+
+Example: allow the client to only redirect the traffic to the configured local network (e.g. 10.0.0.0/24) - Advanced
+---------------------------------------------------------------------------------------------------------------------
+
+::
+
+  [Interface]
+  Address = 192.168.2.1/24
+  PreUp = iptables -t mangle -A PREROUTING -i wg0 -j MARK --set-mark 0x30
+  PreUp = iptables -t nat -A POSTROUTING ! -o wg0 -m mark --mark 0x30 -j MASQUERADE
+  PreUp = iptables -I FORWARD -i wg0 -j REJECT
+  PreUp = iptables -I FORWARD -i wg0 -d 10.0.0.0/24 -j ACCEPT
+  PostDown = iptables -t mangle -D PREROUTING -i wg0 -j MARK --set-mark 0x30
+  PostDown = iptables -t nat -D POSTROUTING ! -o wg0 -m mark --mark 0x30 -j MASQUERADE
+  PostDown = iptables -D FORWARD -i wg0 -j REJECT
+  PostDown = iptables -D FORWARD -i wg0 -d 10.0.0.0/24 -j ACCEPT
   ListenPort = 51820
   PrivateKey = qAuVUEbmcI3ofLsjJmQ6+RtEejoNX+WHs7QOsIccn0Y=
 
@@ -329,7 +348,7 @@ Example: allow the client to only redirect the traffic to the VPN network
 ***************************
 Version control and release
 ***************************
-Version 1.0.0. Improvements and new functionalities will be added in future versions.
+Version 1.1.0. Improvements and new functionalities will be added in future versions.
 
 ***************
 License
