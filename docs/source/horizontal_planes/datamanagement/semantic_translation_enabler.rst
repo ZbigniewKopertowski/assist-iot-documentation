@@ -106,6 +106,7 @@ syntactic translation is not necessary.
 .. |Overview of translation with central modularized ontology| image:: semantic_translation_enabler/uploads/platforms.png
 .. |Process overview| image:: semantic_translation_enabler/uploads/process.png
 
+This enabler has reached a TRL of 6 during the execution of the ASSIST-IoT project.
 
 
 

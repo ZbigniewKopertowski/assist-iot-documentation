@@ -25,6 +25,7 @@ Annotations are defined using the
 The annotator is controlled via a REST API with Swagger documentation
 (http://localhost:8080/swagger/#/ by default).
 
+This enabler has reached a TRL of 6 during the execution of the ASSIST-IoT project.
 
 
 Features

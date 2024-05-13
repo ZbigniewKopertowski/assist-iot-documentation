@@ -29,6 +29,7 @@ streaming capabilities are compatible with the MQTT protocol.
 The database is shipped with the Postgis extension. It stores the
 geolocation data and the application configuration.
 
+This enabler has reached a TRL of 6 during the execution of the ASSIST-IoT project.
 
 
 Features

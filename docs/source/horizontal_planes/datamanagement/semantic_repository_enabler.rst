@@ -26,6 +26,7 @@ Overall focus of the Semantic Repository’s design is high performance,
 scalability, and resiliency. It should be able to scale up and down to
 meet the needs of a specific use case.
 
+This enabler has reached a TRL of 6 during the execution of the ASSIST-IoT project.
 
 
 Features
