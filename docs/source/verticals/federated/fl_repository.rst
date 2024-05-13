@@ -20,6 +20,8 @@ aggregation strategies, as well as numerous data transformations which
 can be combined and used in order to properly process the data across
 multiple heterogenous devices.
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 Features
 ========
 

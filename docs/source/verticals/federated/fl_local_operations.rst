@@ -55,6 +55,8 @@ configurations, basic format verification and pluggable components, as
 well as selected privacy mechanisms. FL Local Operations is compatible
 with Prometheus metric monitoring.
 
+This enabler has reached a TRL of 6 during the execution of the ASSIST-IoT project.
+
 Features
 ========
 
