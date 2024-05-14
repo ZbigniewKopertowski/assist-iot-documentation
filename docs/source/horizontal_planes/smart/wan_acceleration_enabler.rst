@@ -15,6 +15,8 @@ Introduction
 The WAN acceleration enabler will incorporate features that will improve the connections among the clusters and/or sites managed by ASSIST-IoT, and towards the Internet. 
 It will work jointly with the SD-WAN enabler to establish scalable, private tunnels and introduce optimisation features such as traffic prioritisation.
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************

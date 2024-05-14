@@ -13,6 +13,8 @@ Introduction
 ***************
 This enabler will serve as a registry of enablers and, in case they are deployed, the retrieval of their status. In particular, it will: (a) Allow the registration of an enabler (this is, from an ASSIST-IoT repository). Essential enablers will be pre-registered, (b) Retrieve a list of currently-running enablers, (c) Depict the status of an enabler, (d) facilitate the deployment of standalone enablers (mostly for those that have to be present at any deployment).
 
+This enabler has reached a TRL of 7 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************
@@ -135,9 +137,7 @@ The Smart Orchestrator must be previously installed.
 ***************
 Installation
 ***************
-This enabler is part of the Tactile dashboard enabler, so it is installed along with the Smart Orchestrator in the latter's installation script.
-
-However, it can be installed using the dashboard's Helm chart, which can be found in the Package registry of the Gitlab's public repository:
+This enabler is part of the Tactile dashboard enabler, so it can be installed using the dashboard's Helm chart, which can be found in the Package registry of the Gitlab's public repository:
 
 1. Add the Helm chart repository:
 
@@ -196,7 +196,7 @@ research and innovation programme under grant agreement No 957258.
 
 Manageability dashboard, which includes included 2 of the 3 manageability enablers:
 - Enabler for registration and status of enablers
-- Devices management enabler of the Manageability enablers
+- Devices management enabler
 
 Copyright 2020-2023 Universitat Politècnica de València
 

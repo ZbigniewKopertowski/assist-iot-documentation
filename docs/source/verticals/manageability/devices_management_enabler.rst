@@ -15,6 +15,8 @@ The main functionality of this enabler will be to register: (i) a smart IoT devi
 all the necessary messages to notify it to the Smart Orchestrator. Besides, it will allow monitoring any registered node and device in the deployment, including its status (i.e., available and used resources) 
 and current instantiated enablers' components.
 
+This enabler has reached a TRL of 7 during the execution of the ASSIST-IoT project.
+
 
 ***************
 Features
@@ -177,9 +179,8 @@ The Smart Orchestrator must be previously installed.
 ***************
 Installation
 ***************
-This enabler is part of the Tactile dashboard enabler, so it is installed along with the Smart Orchestrator in the latter's installation script.
 
-However, it can be installed using dashboard's Helm chart, which can be found in the Package registry of the Gitlab's public repository:
+This enabler is part of the Tactile dashboard enabler, so it can be installed using the dashboard's Helm chart, which can be found in the Package registry of the Gitlab's public repository:
 
 1. Add the Helm chart repository:
 
@@ -225,7 +226,7 @@ Version 2.0.0. Fully functional and aligned with the version 4.0.0 of the Smart 
 ***************
 License
 ***************
-Apache License Version 2.0
+This software is licensed under the `Apache 2.0 license <https://www.apache.org/licenses/LICENSE-2.0>`_.
 
 *********************
 Notice (dependencies)
@@ -236,9 +237,9 @@ ASSIST-IoT - Architecture for Scalable, Self-\*, human-centric, Intelligent, Se-
 This project has received funding from the European Union's Horizon 2020
 research and innovation programme under grant agreement No 957258.
 
-Manageability dashboard, which includes included 2 of the 3 manageability enablers:
+Manageability dashboard, which includes 2 of the 3 manageability enablers:
 - Enabler for registration and status of enablers
-- Devices management enabler of the Manageability enablers
+- Devices management enabler
 
 Copyright 2020-2023 Universitat Politècnica de València
 

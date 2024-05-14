@@ -9,6 +9,8 @@ Introduction
 
 The objective of this enabler is to provide access between nodes from different sites based on SD-WAN technology. It will work jointly with the WAN acceleration enabler to register managed hubs and clusters, establish private and scalable tunnels within managed K8 clusters.
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 Features
 --------
 
