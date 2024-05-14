@@ -1,5 +1,3 @@
-.. _WAN acceleration enabler:
-
 .. image:: ./images/wan_acceleration_enabler/assist-IoT-logo.png
    :alt: assist-IoT-logo
 
@@ -173,8 +171,6 @@ Define internal mwan3 configuration. Define policies and rules to manage balanci
 +==============+==================================+===========================+============================================================+
 | **Method**   | **Endpoint**                     | **Description**           | **Payload (if need)**                                      |
 +--------------+----------------------------------+---------------------------+------------------------------------------------------------+
-| ------------ | -------------------------------- | ------------------------- | ---------------------------------------------------------- |
-+--------------+----------------------------------+---------------------------+------------------------------------------------------------+
 | POST         | api/v1/mwan3/rules               | MWAN3 Rule Registration   | {"metadata": {"name": "mwan3rule"},"spec": {"family"}}     |
 +--------------+----------------------------------+---------------------------+------------------------------------------------------------+
 | GET          | api/v1/mwan3/rules               | Get all mwan3 rules       |                                                            |
@@ -214,32 +210,58 @@ The exposed port for accessing the API will be one of the available options.
 ***************
 Developer guide
 ***************
-Will be determined after the release of the enabler.
+This code is expected to be executed within a Helm chart, in a Kubernetes-governed platform. It has been also tested with Docker compose and directly over Ubuntu x64 distributions, with and without GPU NVIDIA processors. In case that developers aims at using the code directly over a given Operating System, non-virtualized, the code has been tested only in Ubuntu 20.04 machines, and hence we do not grant that it will work in any other OS.
+
+This code is open source and can be freely used by the innovation and research community. In case that commits are to be made, the mantainer team (UPV) holds the rights to accept or deny them. Best practices are encouraged in the latter case.
 
 ***************************
 Version control and release
 ***************************
-Version 1.0. First release.
+Version 1.0.0
 
 ***************
 License
 ***************
-Copyright 2023 Raúl Reinosa Simón (Universitat Politècnica de València)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
-You may obtain a copy of the License at 
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+This software is licensed under the `Apache 2.0 license <https://www.apache.org/licenses/LICENSE-2.0>`_.
 
 *********************
 Notice (dependencies)
 *********************
-This enabler can work in an standalone fashion to offer network-related features
-related mostly to firewalling. It will be fully functional if it works jointly with
-a SD-WAN enabler, enabling the setup of secured tunnels between clusters.
+ASSIST-IoT - Architecture for Scalable, Self-*, human-centric, Intelligent, Se-cure, and Tactile next generation IoT
+
+This project has received funding from the European Union's Horizon 2020
+research and innovation programme under grant agreement No 957258.
+
+WAN-Acceleration enabler
+
+Copyright 2020-2023 Universitat Politècnica de València
+
+I. Included Software
+
+-   icn-sdwan (https://github.com/akraino-edge-stack/icn-sdwan), Apache-2.0 license
+
+II. Used Software
+
+-   click 8.0.3 (https://github.com/pallets/click/tree/8.0.x), BSD-3-Clause li-cense
+-   colorama 0.4.4 (https://github.com/tartley/colorama/tree/0.4.4), BSD-3-Clause license
+-   Flask 2.0.2 (https://github.com/pallets/flask/tree/2.0.x), BSD-3-Clause li-cense
+-   itsdangerous 2.0.1 (https://github.com/pallets/itsdangerous/tree/2.0.1) BSD-3-Clause license
+-   Jinja2 3.0.3 (https://github.com/pallets/jinja/tree/3.0.3), BSD-3-Clause license
+-   MarkupSafe 2.0.1 (https://github.com/pallets/markupsafe/tree/2.0.1), BSD-3-Clause license
+-   Werkzeug 2.0.2 (https://github.com/pallets/werkzeug/tree/2.0.x), BSD-3-Clause license
+-   gunicorn 20.1.0 (https://github.com/benoitc/gunicorn/tree/20.x), custom li-cense (see list below)
+-   requests 2.27.1 (https://github.com/psf/requests/tree/v2.27.x), Apache-2.0 license
+-   flask_wtf 1.0.0 (https://github.com/wtforms/flask-wtf/tree/1.0.x), BSD-3-Clause license
+-   peewee 3.14.10 (https://github.com/coleifer/peewee/tree/3.14.10), MIT license
+-   wtforms (https://github.com/wtforms/wtforms), BSD-3-Clause license
+-   kubernetes (https://github.com/kubernetes-client/python), Apache-2.0 license
+-   pint (https://github.com/hgrecco/pint/tree/master), BSD-3-Clause li-cense
+-   pymsql (https://github.com/PyMySQL/PyMySQL), MIT licens
+
+
+III. List of licenses
+
+-	BSD-3-Clause license (https://opensource.org/license/bsd-3-clause/)
+-	Gunicorn license (https://github.com/benoitc/gunicorn/blob/master/LICENSE)
+-	Apache-2.0 license (https://www.apache.org/licenses/LICENSE-2.0)
+-	MIT license (https://opensource.org/license/mit/)

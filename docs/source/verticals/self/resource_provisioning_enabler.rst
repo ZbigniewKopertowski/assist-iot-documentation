@@ -53,7 +53,7 @@ The enabler has a management API that provides a flask-based REST interface that
 +---------+-------------------+-----------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 | GET     | /v1/inference     | Execute the inference                   |                                                                                                                    | ["Infence complete sucessfully","Error in execution Inference Module"]                                                                     |
 +---------+-------------------+-----------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
-| GET     | /v1/version       | Return version                          |                                                                                                                    | {"enabler": "resource-provisioning","version": "1.2.0"}                                                                                    |
+| GET     | /version          | Return version                          |                                                                                                                    | {"enabler": "resource-provisioning","version": "1.0.0"}                                                                                    |
 +---------+-------------------+-----------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 | GET     | /v1/health        | Return health status                    |                                                                                                                    | {"status": "healthy"}                                                                                                                      |
 +---------+-------------------+-----------------------------------------+--------------------------------------------------------------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------+
@@ -73,27 +73,61 @@ Installation
 Enabler is provided as a Helm chart. Refer to specific deployment instructions.
 Documentation availabe at: https://gitlab.assist-iot.eu/wp5/t51/resource-provisioning
 
-*********************
-Configuration options
-*********************
-Will be determined after the release of the enabler.
-
 ***************
 Developer guide
 ***************
-Will be determined after the release of the enabler.
+This code is expected to be executed within a Helm chart, in a Kubernetes-governed platform. It has been also tested with Docker compose and directly over Ubuntu x64 distributions, with and without GPU NVIDIA processors. In case that developers aims at using the code directly over a given Operating System, non-virtualized, the code has been tested only in Ubuntu 20.04 machines, and hence we do not grant that it will work in any other OS.
+
+This code is open source and can be freely used by the innovation and research community. In case that commits are to be made, the mantainer team (UPV) holds the rights to accept or deny them. Best practices are encouraged in the latter case.
 
 ***************************
 Version control and release
 ***************************
-Version 1.2. Under development.
+Version 1.0.0
 
 ***************
 License
 ***************
-The licenses of internal code are under analysis. Once assessed, an open source one will be selected (likely Apache 2.0).
+
+This software is licensed under the `Apache 2.0 license <https://www.apache.org/licenses/LICENSE-2.0>`_.
 
 ********************
 Notice(dependencies)
 ********************
-This enabler does not depend on any other.
+ASSIST-IoT - Architecture for Scalable, Self-*, human-centric, Intelligent, Se-cure, and Tactile next generation IoT
+
+This project has received funding from the European Union's Horizon 2020
+research and innovation programme under grant agreement No 957258.
+
+Resource Provisioning enabler
+
+Copyright 2020-2023 Universitat Politècnica de València
+
+I. Included Software
+
+II. Used Software
+
+-	click 8.0.3 (https://github.com/pallets/click/tree/8.0.x), BSD-3-Clause li-cense
+-	colorama 0.4.4 (https://github.com/tartley/colorama/tree/0.4.4), BSD-3-Clause license
+-	Flask 2.0.2 (https://github.com/pallets/flask/tree/2.0.x), BSD-3-Clause li-cense
+-	itsdangerous 2.0.1 (https://github.com/pallets/itsdangerous/tree/2.0.1) BSD-3-Clause license
+-	Jinja2 3.0.3 (https://github.com/pallets/jinja/tree/3.0.3), BSD-3-Clause license
+-	MarkupSafe 2.0.1 (https://github.com/pallets/markupsafe/tree/2.0.1), BSD-3-Clause license
+-	Werkzeug 2.0.2 (https://github.com/pallets/werkzeug/tree/2.0.x), BSD-3-Clause license
+-	gunicorn 20.1.0 (https://github.com/benoitc/gunicorn/tree/20.x), custom li-cense (see list below)
+-	requests 2.27.1 (https://github.com/psf/requests/tree/v2.27.x), Apache-2.0 license
+-	flask_wtf 1.0.0 (https://github.com/wtforms/flask-wtf/tree/1.0.x), BSD-3-Clause license
+-	peewee 3.14.10 (https://github.com/coleifer/peewee/tree/3.14.10), MIT license
+-	wtforms (https://github.com/wtforms/wtforms), BSD-3-Clause license
+- kubernetes (https://github.com/kubernetes-client/python), Apache-2.0 license
+- pint (https://github.com/hgrecco/pint/tree/master), BSD-3-Clause li-cense
+- pymsql (https://github.com/PyMySQL/PyMySQL), MIT license
+- pandas (https://github.com/pandas-dev/pandas), BSD-3-Clause license
+- neuralprophet (https://github.com/ourownstory/neural_prophet), MIT license
+
+III. List of licenses
+
+-	BSD-3-Clause license (https://opensource.org/license/bsd-3-clause/)
+-	Gunicorn license (https://github.com/benoitc/gunicorn/blob/master/LICENSE)
+-	Apache-2.0 license (https://www.apache.org/licenses/LICENSE-2.0)
+-	MIT license (https://opensource.org/license/mit/)

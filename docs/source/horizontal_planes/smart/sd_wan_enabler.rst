@@ -4,10 +4,6 @@
 SD-WAN enabler
 ==============
 
-Note: Currently in development
-
-The installation has been verified on kubernetes v1.23.3
-
 Introduction
 ------------
 
@@ -211,30 +207,38 @@ An analysis of the configurations to be modifiable by a user is under assessment
 Developer guide
 ---------------
 
-Will be determined after the release of the enabler.
+This code is expected to be executed within a Helm chart, in a Kubernetes-governed platform. It has been also tested with Docker compose and directly over Ubuntu x64 distributions, with and without GPU NVIDIA processors. In case that developers aims at using the code directly over a given Operating System, non-virtualized, the code has been tested only in Ubuntu 20.04 machines, and hence we do not grant that it will work in any other OS.
+
+This code is open source and can be freely used by the innovation and research community. In case that commits are to be made, the mantainer team (UPV) holds the rights to accept or deny them. Best practices are encouraged in the latter case.
 
 Version control and release
 ---------------------------
 
-1.0
+1.0.0
 
 License
 -------
 
-Copyright 2023 Raúl Reinosa Simón (Universitat Politècnica de València)
-
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License.
-You may obtain a copy of the License at 
-
-http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+This software is licensed under the `Apache 2.0 license <https://www.apache.org/licenses/LICENSE-2.0>`_.
 
 Notice (dependencies)
 ---------------------
 
-Although it can be deployed standalone, this enabler does not have any sense without having WAN acceleration enablers deployed in the clusters to manage (as hubs or as edge nodes).
+ASSIST-IoT - Architecture for Scalable, Self-*, human-centric, Intelligent, Se-cure, and Tactile next generation IoT
+
+This project has received funding from the European Union's Horizon 2020
+research and innovation programme under grant agreement No 957258.
+
+SD-WAN enabler
+
+Copyright 2020-2023 Universitat Politècnica de València
+
+I. Included Software
+
+-   icn-sdwan (https://github.com/akraino-edge-stack/icn-sdwan), Apache-2.0 license
+
+II. Used Software
+
+III. List of licenses
+
+-   Apache-2.0 license (https://www.apache.org/licenses/LICENSE-2.0)
