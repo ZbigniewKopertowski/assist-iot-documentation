@@ -19,6 +19,8 @@ of an AI/ML framework and dedicated algorithms. The traffic classification
 enabler can be seen as a service of the application layer of the general SDN 
 architecture.
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************
@@ -133,7 +135,7 @@ Version 1.0.
 ***************
 License
 ***************
-Apache License 2.0.
+This software is licensed under the `Apache 2.0 license <https://www.apache.org/licenses/LICENSE-2.0>`_.
 
 This work builds upon the research presented in Lotfollahi, M., Jafari Siavoshani, M., Shirali Hossein Zade, R. et al. Deep packet: a novel approach for encrypted traffic classification using deep learning. Soft Comput 24, 1999–2012 (2020). https://doi.org/10.1007/s00500-019-04030-2
 It also extends the work done in: https://blog.munhou.com/2020/04/05/Pytorch-Implementation-of-Deep-Packet-A-Novel-Approach-For-Encrypted-Tra%EF%AC%83c-Classi%EF%AC%81cation-Using-Deep-Learning/
@@ -147,6 +149,7 @@ This project has received funding from the European Union's Horizon 2020
 research and innovation programme under grant agreement No 957258.
 
 Traffic classification enabler
+
 Copyright 2020-2023 Universitat Politècnica de València
 
 I. Included Software

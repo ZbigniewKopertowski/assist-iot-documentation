@@ -13,6 +13,8 @@ Introduction
 ***************
 This enabler facilitates the access to a node or device from a different network to the site's private network using a public network (e.g., the Internet) or a non-trusted private network.
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************
@@ -216,7 +218,15 @@ Or edit these values in the */etc/sysctl.conf* file.
 ***************
 Installation
 ***************
-The enabler is provided as a Helm chart.
+The enabler can be installed using its Helm chart, which is publicly available in `Artifact Hub <https://artifacthub.io/packages/helm/assist-iot-vpn/vpn>`_.
+
+1. Add the Helm chart repository:
+
+   ``helm repo add assist-iot-vpn helm repo add assist-iot-vpn https://assist-iot.github.io/vpn/vpn-artifact``
+
+2. Install the lastest version of the enabler:
+
+   ``helm install vpn-enabler assist-iot-vpn/vpn``
 
 *********************
 Configuration options
@@ -243,6 +253,7 @@ Developer guide
 
 Local code development
 **********************
+The source code is publicly available in `GitHub <https://github.com/assist-iot/vpn>`_.
 
 1. Install WireGuard and WireGuard tools in the machine: https://www.wireguard.com/install/ 
 2. Create a WireGuard network interface for testing. A configuration file example for creating the interfacecan be found at the section below.
@@ -353,7 +364,7 @@ Version 1.1.0. Improvements and new functionalities will be added in future vers
 ***************
 License
 ***************
-Apache License Version 2.0
+This software is licensed under the `Apache 2.0 license <https://www.apache.org/licenses/LICENSE-2.0>`_.
 
 *********************
 Notice (dependencies)

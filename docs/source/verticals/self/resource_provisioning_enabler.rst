@@ -15,6 +15,8 @@ Introduction
 ***************
 This enabler will be able to horizontally scale (up or down) the resources devoted to a specific enabler (inside a node) in a dynamic fashion, based on time series inference and custom logic.
 
+This enabler has reached a TRL of 6 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************

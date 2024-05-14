@@ -15,7 +15,9 @@ This enabler presents a graphical environment where ASSIST-IoT administrators ca
 to compose a composite service (i.e., a workflow or a pipeline). Having information about the physical topology and available K8s nodes/clusters, 
 it allows the user to decide whether to select the proper node or cluster for deploying an enabler, or let the system decide based on pre-defined architectural rules.
 
-The composite services manager can be integrated in the tactile dashboard enabler.
+In addition, the composite services manager can be integrated in the tactile dashboard enabler.
+
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
 
 ***************
 Features
@@ -134,15 +136,15 @@ The Smart Orchestrator and the LTSE must be previously installed.
 ***************
 Installation
 ***************
-The enabler can be installed using its Helm chart, but in future releases it will be installed along with the Smart Orchestrator in the latter's installation script.
+The enabler can be installed using its Helm chart, which is publicly available in `Artifact Hub <https://artifacthub.io/packages/helm/assist-iot-vpn/vpn>`_.
 
 1. Add the Helm chart repository:
 
-   ``helm repo add assist-public-repo https://gitlab.assist-iot.eu/api/v4/projects/85/packages/helm/stable``
+   ``helm repo add assist-iot-composite-services https://assist-iot.github.io/composite_services/composite-services-manager-artifact``
 
-2. Install the last version of the enabler:
+2. Install the lastest version of the enabler:
 
-   ``helm install assist-public-repo/composite-services``
+   ``helm install composite-services-enabler assist-iot-composite-services/composite-services``
 
 *********************
 Configuration options
@@ -158,7 +160,10 @@ The backend of the enabler can be configured using the following environment var
 ***************
 Developer guide
 ***************
-The intention of this enabler is to be open to the development of `new Node-RED nodes <https://nodered.org/docs/creating-nodes/>`_ and translation agents. Please, use the developed `nodes <https://github.com/assist-iot/composite_services/tree/master/node-red>`_ 
+The source code is publicly available in `GitHub <https://github.com/assist-iot/composite_services>`_.
+
+The intention of this enabler is to be open to the development of `new Node-RED nodes <https://nodered.org/docs/creating-nodes/>`_ and translation agents. Please, use the developed `nodes <https://github.com/assist-iot/composite_services/tree/main/node-red/node-red-nodes>`_
+, which have been published in the `Node-RED Flow Library <https://flows.nodered.org/node/@ravaga/assistiot-composite-services-manager>`_, 
 and `agents <https://github.com/assist-iot/composite_services/tree/master/agents>`_  as a reference.
 
 ***************************
@@ -169,7 +174,7 @@ Version 1.1.0 fully functional, but it is open to the addition of more agents, n
 ***************
 License
 ***************
-Apache License Version 2.0
+This software is licensed under the `Apache 2.0 license <https://www.apache.org/licenses/LICENSE-2.0>`_.
 
 *********************
 Notice (dependencies)
@@ -180,7 +185,7 @@ ASSIST-IoT - Architecture for Scalable, Self-\*, human-centric, Intelligent, Se-
 This project has received funding from the European Union's Horizon 2020
 research and innovation programme under grant agreement No 957258.
 
-Composite services manager of the Manageability enablers
+Composite services manager enabler of the manageability enablers
 
 Copyright 2020-2023 Universitat Politècnica de València
 

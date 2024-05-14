@@ -15,6 +15,8 @@ The main goal of this enabler is to manage different wireless access networks,
 so in case the primary link is down a second one is up without noticing (at least, 
 not by the user) any kind of service disruption.
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************
@@ -483,7 +485,7 @@ Version 1.0.0
 ***************
 License
 ***************
-Copyright 2023 Juan Gascón Repullés (Universitat Politècnica de València)
+Copyright 2023 Universitat Politècnica de València
 
 Licensed under the Apache License, Version 2.0 (the “License”); you may not use this file except in compliance with the License. You may obtain a copy of the License at 
 
