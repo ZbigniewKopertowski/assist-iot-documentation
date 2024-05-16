@@ -32,6 +32,8 @@ continuously sending updates to the FL Orchestrator (GUI) and storing
 the results of the training (final weights of the model and relevant
 metrics) in the FL Repository (database).
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 Features
 ========
 
