@@ -13,6 +13,8 @@ Introduction
 ***************
 This enabler could be viewed as a general purpose by representing it as a combination of high-level monitoring module (which would allow to monitor devices, logs, etc.) and notifying module that could send custom messages to predefined system components.
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 **NOTE**: This enabler started with different technologies and approcah and was refactored in the duration of the project. Both implementations are documented and can be accessed through the corresponding GitHub repository.
 
 ***************

@@ -13,6 +13,8 @@ Introduction
 ***************
 This enabler provides a mechanism that facilitates data sharing among different heterogeneous IoT devices of the architecture. It deals with data source metadata management and provide trustable, findable, and retrievable metadata for the data sources.
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************

@@ -14,6 +14,8 @@ Introduction
 
 The OpenAPI Management enabler is the enabler responsible for managing the APIs in the Assist-IoT project by allowing the enablers of the project to publish their APIs, monitor their lifecycles and make sure that that the needs of external third parties, as well as applications that using the APIs, are beeing met. Hence, the main functionalities that it serves are to collect all the APIs that are used by the Assist-IoT enablers in order to proxy them through the API gateway to the external users, to be used as an API portal from which the developers can push their OpenAPI documentations to the API-gateway ,store them in an API library and interact with them through SwaggerUI. 
 
+This enabler has reached a TRL of 6 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************
