@@ -20,6 +20,8 @@ involve IoT architectures. Below is a high-level diagram of the Edge data broker
   :width: 600
   :alt: High level diagram of Edge data broker
 
+EDB Enabler reaches at the end of the ASSIST-IoT project TRL6.
+
 ***************
 Features
 ***************
