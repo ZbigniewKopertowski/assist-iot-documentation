@@ -15,6 +15,8 @@ Introduction
 
 .. image:: https://github.com/assist-iot/assist-iot-documentation/assets/100563908/608873fb-09d4-4e1e-81ae-93c92f61dd53
 
+PUD Enabler reaches at the end of the ASSIST-IoT project TRL6.
+
 ***************
 Features
 ***************
