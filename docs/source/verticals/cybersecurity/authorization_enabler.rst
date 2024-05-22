@@ -14,6 +14,8 @@ Introduction
 
 Authorization server offers a decision-making service based on XACML policies. It has different modules that interact and can be deployed independently such as, PEP (Policy Decision Point), PAP (Policy Administration Point), PIP (Policy Information Point) and PDP (Policy Decision Point). Server will present a Rest interface and will respond to an external authorization request. The decision may be accompanied by a set of action to be launched, in the form of external requests.
 
+This enabler has reached a TRL 6 during the execution of the ASSIST-IoT project, and this technology has been demonstrated in ASSIST-IoT Pilots as relevant environment.
+
 ***************
 Features
 ***************
