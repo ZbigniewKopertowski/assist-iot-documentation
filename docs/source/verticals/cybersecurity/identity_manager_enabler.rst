@@ -13,6 +13,8 @@ Introduction
 ***************
 Using OAuth2 protocol, it will offer a federated identification service where service requester and provider will be able to establish a trusted relation without previously knowing each other. This way a secure identification process is completed without the service provider having received the re-quester credentials.
 
+This enabler has reached a TRL 6 during the execution of the ASSIST-IoT project, and this technology has been demonstrated in ASSIST-IoT Pilots as relevant environment.
+
 ***************
 Features
 ***************
