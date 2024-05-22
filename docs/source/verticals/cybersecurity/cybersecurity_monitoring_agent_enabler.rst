@@ -13,6 +13,8 @@ Introduction
 ***************
 Perform functions of an endpoint detection and response system, monitoring and collecting activity from end points that could indicate a threat. Security agent runs at a host-level, combining anomaly and signature-based technologies to detect intrusions or software misuse.
 
+This enabler has reached a TRL 6 during the execution of the ASSIST-IoT project, and this technology has been demonstrated in ASSIST-IoT Pilots as relevant environment.
+
 ***************
 Features
 ***************
