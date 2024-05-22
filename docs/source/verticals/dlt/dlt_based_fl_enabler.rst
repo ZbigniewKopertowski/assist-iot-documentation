@@ -13,6 +13,8 @@ Introduction
 ***************
 The DLT-based FL enabler is a system that provides a secure reputation mechanism for all local operators in a federated learning (FL) system. The reputation mechanism serves as a safeguard against free-riders and malicious adversaries, ensuring that only reputable local operators can contribute to the global model.
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************

@@ -13,6 +13,8 @@ Introduction
 ***************
 This is an enabler responsible for providing DLT-based data integrity verification mechanisms that allow data consumers to verify the integrity of any data at question.
 
+This enabler has reached a TRL of 6 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************

@@ -13,6 +13,8 @@ Introduction
 ***************
 This enabler logs critical actions that happen during the data exchange between ASSIST-IoT stakeholders.
 
+This enabler has reached a TRL of 5 during the execution of the ASSIST-IoT project.
+
 ***************
 Features
 ***************
