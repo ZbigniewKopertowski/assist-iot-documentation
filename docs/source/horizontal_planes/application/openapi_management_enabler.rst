@@ -395,7 +395,7 @@ The software included is:
 
 - Konga GUI (https://github.com/pantsel/konga) MIT License (MIT)
 
-- Python FastAPI (https://github.com/tiangolo/fastapi) MIT License (MIT)
+- Python (https://www.python.org/) 
 
 - OpenAPI Specification (https://github.com/OAI/OpenAPI-Specification) Apache 2.0 License
 
