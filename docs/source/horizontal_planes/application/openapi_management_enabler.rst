@@ -397,6 +397,8 @@ The software included is:
 
 - Python (https://www.python.org/) 
 
+- JavaScript (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Introduction) 
+
 - OpenAPI Specification (https://github.com/OAI/OpenAPI-Specification) Apache 2.0 License
 
 - Swagger UI (https://github.com/swagger-api/swagger-ui) Apache 2.0 License
