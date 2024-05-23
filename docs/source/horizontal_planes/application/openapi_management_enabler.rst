@@ -388,3 +388,15 @@ Notice(dependencies)
 ********************
 
 **NOTE:** The OpenAPI Gateway Management Enabler operates independently and does not require any other enablers to be installed. The Assist-IoT enablers publish their APIs through the OpenAPI Management Enabler.
+
+The software included is:
+
+- Kong API Gateway (https://github.com/Kong/kong) Apache 2.0 License 
+
+- Konga GUI (https://github.com/pantsel/konga) MIT License (MIT)
+
+- Python FastAPI (https://github.com/tiangolo/fastapi) MIT License (MIT)
+
+- OpenAPI Specification (https://github.com/OAI/OpenAPI-Specification) Apache 2.0 License
+
+- Swagger UI (https://github.com/swagger-api/swagger-ui) Apache 2.0 License
