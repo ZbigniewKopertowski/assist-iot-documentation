@@ -347,6 +347,10 @@ To install the helm charts we using the follwing command:
 
 Where openapi-enabler is the directory where the helm charts are loacated. 
 
+*********************
+Configuration options
+*********************
+
 Configure Konga Manager 
 ########################
 
@@ -357,21 +361,19 @@ To connect Konga manager with Kong API gateway we need provide konga with KONG's
 .. image:: images/konga-connection.png
 
 
-*********************
-Configuration options
-*********************
+
 
 The configuration options will be provided after the release of the enabler.
 
 ***************
 Developer guide
 ***************
-
-The developer guide will be determined after the release of the enabler.
+Please refer to official `Kong API Gateway documentation <https://docs.konghq.com/gateway/latest/>`__ 
 
 ***************************
 Version control and release
 ***************************
+Kong API Gateway v2.8
 
 Version 0.2.0. Fully functional and able to retrieve all data even if the cluster fails.
 
@@ -385,4 +387,4 @@ OpenAPI management enabler is under BSD 3-Clause "New" or "Revised" License.
 Notice(dependencies)
 ********************
 
-Dependenies list information will be provided after the release of the enabler.
+**NOTE:** The OpenAPI Gateway Management Enabler operates independently and does not require any other enablers to be installed. The Assist-IoT enablers publish their APIs through the OpenAPI Management Enabler.
